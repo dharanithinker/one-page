@@ -884,7 +884,7 @@ h5.sub-title {
 /* 3.3 Photography Studio  */
 .intro-block {
   background-color: #f6f7f8;
-  padding: 75px 0;
+  padding: 75px 0 0 0;
   overflow: hidden;
 }
 
@@ -3304,4 +3304,9 @@ p.copyright-text {
 
 .whatsapp-button i {
   font-size: 1.1em;
+}
+
+.why-block {
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
