@@ -876,7 +876,7 @@ h5.sub-title {
 }
 
 .contact-block h2.the-title a {
-  color: #ffffff;
+  /* color: #ffffff; */
   font-size: 6rem;
   font-weight: 700;
   text-transform: none;
@@ -885,7 +885,7 @@ h5.sub-title {
 
 .contact-block h2.the-title span {
   color: #1b1b1b;
-  border-bottom: 3px solid #1b1b1b;
+  border-bottom: 3px solid #25d2eb;
 }
 
 /* 3.3 Photography Studio  */
@@ -3315,4 +3315,8 @@ p.copyright-text {
 
 .why-block {
   margin-bottom: 1%;
+}
+
+.active-btn {
+  cursor: pointer;
 }
