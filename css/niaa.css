@@ -82,7 +82,7 @@ p,
 }
 
 .nia-section {
-    padding: 90px 0;
+    padding: 50px 0;
     background: var(--bg-soft);
 }
 
@@ -168,7 +168,7 @@ p,
 
 .plan-card-inner {
     width: 100%;
-    min-height: 700px;
+    min-height: 800px;
     position: relative;
     transition: transform 0.7s ease;
     transform-style: preserve-3d;
@@ -262,7 +262,7 @@ p,
     margin-bottom: 18px;
 }
 
-.plan-matrix-card .price{
+.plan-matrix-card .price {
     font-size: 14px;
     font-weight: 600;
     color: #7a5f3f;
@@ -338,8 +338,13 @@ p,
 }
 
 .plan-note {
-    margin-top: 18px;
+    text-align: center;
+    margin-top: 10px;
     color: #666;
+}
+
+.plan-note h2 {
+    color: #25d2eb;
 }
 
 .plan-matrix-row {
@@ -402,7 +407,7 @@ p,
     min-height: 0;
 }
 
-.capture-gallery-grid .nia-env-card > div {
+.capture-gallery-grid .nia-env-card>div {
     height: 100%;
     min-height: 0 !important;
     border-radius: 22px;
@@ -483,6 +488,7 @@ p,
         grid-template-columns: repeat(8, minmax(0, 1fr));
         grid-auto-rows: 200px;
     }
+
     .capture-gallery-grid .nia-env-card:nth-child(1),
     .capture-gallery-grid .nia-env-card:nth-child(4),
     .capture-gallery-grid .nia-env-card:nth-child(8),
@@ -496,6 +502,7 @@ p,
         grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-auto-rows: auto;
     }
+
     .capture-gallery-grid .nia-env-card {
         grid-column: span 2 !important;
         grid-row: span 1 !important;
@@ -509,6 +516,7 @@ p,
 }
 
 @media (max-width: 992px) {
+
     .nia-feature-grid,
     .nia-env-grid,
     .nia-why-grid {
@@ -517,6 +525,7 @@ p,
 }
 
 @media (max-width: 992px) {
+
     .nia-feature-grid,
     .nia-env-grid,
     .nia-why-grid {
@@ -525,6 +534,7 @@ p,
 }
 
 @media (max-width: 680px) {
+
     .nia-feature-grid,
     .nia-env-grid,
     .nia-why-grid {
@@ -833,6 +843,7 @@ p,
 }
 
 @media (max-width: 900px) {
+
     .nia-grid,
     .nia-plan-grid,
     .plan-variant-grid,
