@@ -399,22 +399,29 @@ h3.sub-title {
   z-index: 50;
   width: 100%;
   background: #fff;
-  height: 50px;
+  height: 65px;
+  display: flex;
+  align-items: center;
 }
 
 .header-style1-wrap {
-  padding: 10px 0px 0 19px;
+  padding: 0 24px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 65px;
 }
 
 h2.logo-title {
-  margin: -50px 0 0;
+  margin: 0;
   font-size: 2rem;
+  display: flex;
+  align-items: center;
 }
 
 .logo-img {
-  max-height: 135px;
+  max-height: 70px;
   width: auto;
   height: auto;
   display: inline-block;
@@ -899,7 +906,7 @@ h5.sub-title {
   width: 55%;
   align-self: center;
   padding-top: 15px;
-  padding-left: 0;
+  padding-left: 5%;
   padding-right: 0;
 }
 
@@ -920,7 +927,7 @@ h5.sub-title {
 
 .intro-block h2.the-title {
   background: #fff;
-  padding: 36px;
+  /* padding: 36px; */
   color: #000000;
   font-size: 5rem;
   font-weight: 700;
@@ -3307,6 +3314,5 @@ p.copyright-text {
 }
 
 .why-block {
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 1%;
 }
