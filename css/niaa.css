@@ -164,11 +164,12 @@ p,
 
 .plan-matrix-card {
     perspective: 1200px;
+    padding: 15px;
 }
 
 .plan-card-inner {
     width: 100%;
-    min-height: 800px;
+    min-height: 760px;
     position: relative;
     transition: transform 0.7s ease;
     transform-style: preserve-3d;
@@ -191,7 +192,7 @@ p,
 }
 
 .plan-card-front {
-    padding: 30px 24px 0px 24px;
+    padding: 15px 0px 0px 0px;
     background: inherit;
     color: inherit;
 }
@@ -214,23 +215,42 @@ p,
     display: block;
 }
 
-.plan-card-hint {
+.plan-card-cta {
     margin: 16px 0 24px;
-    font-size: 14px;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
+    align-self: center;
+    appearance: none;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    opacity: 0.82;
+    cursor: pointer;
+    transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.plan-card-cta:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.16);
+    border-color: rgba(255, 255, 255, 0.55);
+}
+
+.plan-card-cta:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
 }
 
 .plan-card-back {
-    background: #111;
+    /* background: #111; */
     color: #fff;
     transform: rotateY(180deg);
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 24px;
+    padding: 16px 5px;
 }
 
 .plan-card-back-content {
@@ -241,7 +261,7 @@ p,
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 14px;
+    gap: 5px;
 }
 
 .back-label {
@@ -280,14 +300,15 @@ p,
 
 .plan-card-tag {
     display: inline-block;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--accent);
     background: rgba(37, 99, 235, 0.08);
     padding: 8px 12px;
-    margin-bottom: 18px;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 .plan-matrix-card .price {
