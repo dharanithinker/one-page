@@ -1,3 +1,76 @@
+:root {
+    --bg-soft: #F8FAFC;
+    --surface: #FFFFFF;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --accent: #25d2eb;
+    --accent-hover: #25d2eb;
+    --border: #E2E8F0;
+    --highlight: #14B8A6;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-soft);
+    color: var(--text-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.the-title,
+.sub-title {
+    font-family: 'DM Serif Display', serif;
+    color: var(--text-primary);
+}
+
+h1 {
+    font-size: 68px;
+    line-height: 1.05;
+}
+
+.the-title {
+    font-size: 48px;
+    line-height: 1.12;
+}
+
+.sub-title {
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+p,
+.section-description,
+.nia-env-card p,
+.plan-matrix-row,
+.plan-note,
+.plan-matrix-row span,
+.plan-matrix-row strong {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    line-height: 1.75;
+    color: var(--text-secondary);
+}
+
+.button.style-1,
+.button.style-3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+.button.style-1:hover,
+.button.style-3:hover {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+}
+
 .nia-hero {
     min-height: 100vh;
     position: relative;
@@ -10,11 +83,11 @@
 
 .nia-section {
     padding: 90px 0;
-    background: #f7f7f3;
+    background: var(--bg-soft);
 }
 
 .nia-section.alt-bg {
-    background: #fff;
+    background: var(--surface);
 }
 
 .nia-grid {
@@ -37,10 +110,10 @@
 }
 
 .nia-plan-card {
-    background: #fff;
-    border: 1px solid #e8e3db;
+    background: var(--surface);
+    border: 1px solid var(--border);
     padding: 32px 24px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.04);
 }
 
 .nia-plan-card h4 {
@@ -80,10 +153,10 @@
 .plan-variant-card,
 .plan-matrix-card,
 .plan-story-card {
-    background: linear-gradient(180deg, #ffffff 0%, #fbfaf7 100%);
-    border: 1px solid #e8e3db;
+    background: var(--surface);
+    border: 1px solid var(--border);
     padding: 30px 24px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.04);
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -174,7 +247,7 @@
     top: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, #9d7f58 0%, #d6c3a6 100%);
+    background: linear-gradient(90deg, var(--accent) 0%, var(--highlight) 100%);
 }
 
 .plan-card-tag {
@@ -183,8 +256,8 @@
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: #7a5f3f;
-    background: #f4ebdf;
+    color: var(--accent);
+    background: rgba(37, 99, 235, 0.08);
     padding: 8px 12px;
     margin-bottom: 18px;
 }
@@ -205,7 +278,7 @@
 }
 
 #plan-comparision-3 {
-    background: #000;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--highlight) 100%);
     color: #fff;
 }
 
@@ -465,9 +538,9 @@
     overflow: hidden;
     border-radius: 22px;
     padding: 28px 26px;
-    background: linear-gradient(135deg, #ffffff 0%, #fbf7ee 100%);
-    border: 1px solid #e8dfcc;
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.05);
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.04);
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
@@ -480,11 +553,11 @@
     position: absolute;
     inset: 0 0 auto 0;
     height: 4px;
-    background: linear-gradient(90deg, #111 0%, #da0d2b 100%);
+    background: linear-gradient(90deg, var(--accent) 0%, var(--highlight) 100%);
 }
 
 .nia-env-card:nth-child(odd)::before {
-    background: linear-gradient(90deg, #111 0%, #c48b3d 100%);
+    background: linear-gradient(90deg, var(--highlight) 0%, var(--accent) 100%);
 }
 
 .nia-feature-card:hover,
@@ -493,8 +566,8 @@
 .nia-timeline-item:hover,
 .trial-class-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 38px rgba(0, 0, 0, 0.09);
-    border-color: #d7c1a2;
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.12);
+    border-color: var(--accent);
 }
 
 .nia-feature-icon,
@@ -508,8 +581,8 @@
     width: 46px;
     height: 46px;
     border-radius: 50%;
-    background: rgba(17, 17, 17, 0.06);
-    color: #111;
+    background: rgba(37, 99, 235, 0.08);
+    color: var(--accent);
     font-size: 20px;
     margin-bottom: 14px;
 }
@@ -546,10 +619,11 @@
 .nia-env-card h4,
 .nia-why-card h4,
 .nia-timeline-item h4 {
-    font-size: 18px;
+    font-size: 24px;
     margin-bottom: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--text-primary);
 }
 
 .nia-feature-card p,
@@ -557,13 +631,13 @@
 .nia-why-card p,
 .nia-timeline-item p {
     margin: 0;
-    color: #555;
+    color: var(--text-secondary);
     line-height: 1.8;
 }
 
 .nia-env-card p {
-    font-size: 14px;
-    color: #666;
+    font-size: 16px;
+    color: var(--text-secondary);
     line-height: 1.7;
 }
 

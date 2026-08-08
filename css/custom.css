@@ -123,8 +123,8 @@ p,
 .header-content-right #main-menu li:last-child a {
   color: #ffffff;
   background: var(--accent);
-  padding: 0.6rem 1.1rem;
-  border-radius: 999px;
+  padding: 1.6rem 1.1rem;
+  border-radius: 5px !important;
   font-weight: 600;
   box-shadow: 0 8px 20px rgba(37, 99, 235, 0.18);
 }
@@ -167,6 +167,7 @@ p,
 .why-block .nia-env-grid {
   margin-top: 36px;
 }
+
 
 .why-block .nia-env-card {
   background: var(--surface);
