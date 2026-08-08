@@ -370,7 +370,7 @@ p,
 /* ===== IMPACT SECTION FIX ===== */
 
 #impact {
-  padding: 50px 0;
+  padding: 50px 0 0 0;
   background: var(--bg-soft);
 }
 

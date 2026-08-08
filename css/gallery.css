@@ -1,0 +1,141 @@
+:root {
+    --bg-soft: #F8FAFC;
+    --surface: #FFFFFF;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --accent: #25d2eb;
+    --accent-hover: #25d2eb;
+    --border: #E2E8F0;
+    --highlight: #14B8A6;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-soft);
+    color: var(--text-primary);
+}
+
+.main-wrapper,
+.content {
+    margin-top: 1.5%;
+    background: var(--bg-soft);
+}
+
+.the-title,
+.sub-title,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'DM Serif Display', serif;
+    color: var(--text-primary);
+}
+
+h1 {
+    font-size: 68px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+}
+
+.the-title {
+    font-size: 48px;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+}
+
+.sub-title {
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+p,
+.the-desc,
+.service-desc,
+.team-role,
+.copyright-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    line-height: 1.75;
+    color: var(--text-secondary);
+}
+
+.divider-separator {
+    background: linear-gradient(90deg, var(--accent) 0%, var(--highlight) 100%);
+}
+
+.button.style-3,
+.button.style-1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #ffffff;
+}
+
+.button.style-3:hover,
+.button.style-1:hover,
+.button.style-3:focus,
+.button.style-1:focus {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+    color: #ffffff;
+}
+
+/* Header Menu Styles */
+.header-content-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-content-right #main-menu {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.header-content-right #main-menu li a {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+    padding: 0.35rem 0.7rem;
+    transition: all 0.3s ease;
+}
+
+.header-content-right #main-menu li a:hover {
+    color: var(--accent);
+}
+
+.header-content-right #main-menu li:last-child a {
+    color: #ffffff;
+    background: var(--accent);
+    padding: 1.6rem 1.1rem;
+    border-radius: 5px !important;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.18);
+}
+
+.header-content-right #main-menu li:last-child a:hover {
+    background: var(--accent-hover);
+    color: #ffffff;
+}
+
+.jepret-menu-mobile {
+    color: var(--accent);
+}
+
+.header-style1-wrap {
+    padding: 0 0px 0 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 65px;
+}
