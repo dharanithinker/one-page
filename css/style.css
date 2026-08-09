@@ -344,7 +344,7 @@ a {
 .divider-separator {
   width: 15%;
   height: 4px;
-  background: #c9162f;
+  background: linear-gradient(90deg, #25d2eb 0%, #14B8A6 100%);
   display: block;
 }
 
