@@ -260,7 +260,7 @@ p,
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 5px;
+    gap: 3px;
 }
 
 .back-label {
@@ -299,7 +299,7 @@ p,
 
 .plan-card-tag {
     display: inline-block;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;

@@ -1421,7 +1421,10 @@
   }
 
   .intro-block h3.sub-title {
-    line-height: 0;
+    font-size: 1rem;
+    line-height: 1.35em;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
   }
 
   .intro-block h2.the-title {
