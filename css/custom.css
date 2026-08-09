@@ -113,7 +113,7 @@ p,
 
 .header-content-right #main-menu li a {
   font-family: 'Inter', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--text-primary);
   padding: 0.35rem 0.7rem;
@@ -127,7 +127,7 @@ p,
 .header-content-right #main-menu li:last-child a {
   color: #ffffff;
   background: var(--accent);
-  padding: 1.6rem 1.1rem;
+  padding: 1rem;
   border-radius: 5px !important;
   font-weight: 600;
   box-shadow: 0 8px 20px rgba(37, 99, 235, 0.18);

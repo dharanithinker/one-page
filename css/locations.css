@@ -1,0 +1,443 @@
+.india-map-img {
+  max-width: 110%;
+}
+
+.location-page {
+  background:
+    radial-gradient(circle at top right, rgba(37, 210, 235, 0.12), transparent 28%),
+    radial-gradient(circle at left center, rgba(242, 180, 90, 0.12), transparent 26%),
+    linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.location-hero {
+  padding: 100px 0 70px;
+}
+
+.location-hero-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 3fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.location-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  padding: 8px 14px 8px 42px;
+  position: relative;
+  overflow: visible;
+  isolation: isolate;
+  border-radius: 999px;
+  background: rgba(37, 210, 235, 0.1);
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.location-kicker::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  animation: kickerCorePulse 1.6s ease-in-out infinite;
+  z-index: 2;
+}
+
+.location-kicker::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid rgb(255 255 255 / 65%);
+  transform: translate(-50%, -50%) scale(1);
+  animation: kickerRingPulse 1.6s ease-out infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes kickerCorePulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 210, 235, 0.45);
+    opacity: 1;
+  }
+
+  50% {
+    box-shadow: 0 0 0 6px rgba(37, 210, 235, 0.1);
+    opacity: 0.92;
+  }
+}
+
+@keyframes kickerRingPulse {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  25% {
+    opacity: 0.65;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(3.2);
+  }
+}
+
+.location-hero .the-title {
+  max-width: 640px;
+  margin-bottom: 18px;
+}
+
+.location-hero .the-desc {
+  max-width: 640px;
+  margin-bottom: 0;
+}
+
+.location-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 26px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.location-tag-list li {
+  padding: 10px 16px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 999px;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.05);
+}
+
+.location-hero-card {
+  padding: 28px;
+  background: linear-gradient(135deg, #0f172a 0%, #1f2937 100%);
+  color: #fff;
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.18);
+}
+
+.location-hero-card .sub-title,
+.location-hero-card .the-title,
+.location-hero-card p {
+  color: #fff;
+}
+
+.location-hero-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.location-stat {
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.location-stat strong {
+  display: block;
+  font-size: 28px;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.location-map-section {
+  padding: 30px 0 100px;
+}
+
+.location-panel {
+  padding: 34px;
+  border-radius: 28px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.08);
+}
+
+.location-section-head {
+  max-width: 760px;
+  margin-bottom: 28px;
+}
+
+.location-section-head .the-desc {
+  margin-top: 14px;
+}
+
+.location-map-stage {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #eef6fb 0%, #f8fafc 100%);
+  border: 1px solid rgba(37, 210, 235, 0.12);
+}
+
+.location-map-stage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.map-location {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -100%);
+  z-index: 2;
+  text-decoration: none;
+}
+
+.map-location::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #25d2eb;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 0 rgba(37, 210, 235, 0.45);
+  transform: translate(-50%, -50%);
+  animation: pulseMap 1.8s infinite;
+}
+
+.map-location::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 2px;
+  height: 16px;
+  background: rgba(15, 23, 42, 0.65);
+  transform: translateX(-50%);
+}
+
+.map-location span {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.92);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  box-shadow: 0 14px 24px rgba(15, 23, 42, 0.2);
+  white-space: nowrap;
+}
+
+.map-location span::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #f2b45a;
+}
+
+.bareilly {
+  top: 20%;
+  left: 55%;
+}
+
+.chennai {
+  top: 74%;
+  left: 71%;
+}
+
+.coimbatore {
+  top: 78%;
+  left: 54%;
+}
+
+.mangalore {
+  top: 66%;
+  left: 44%;
+}
+
+.mysore {
+  top: 69%;
+  left: 50%;
+}
+
+.palani {
+  top: 82%;
+  left: 58%;
+}
+
+.location-map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.location-map-legend .legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #f8fafc;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.location-map-legend .legend-item::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #25d2eb;
+}
+
+.location-grid-section {
+  padding: 0 0 100px;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.location-card {
+  padding: 26px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 18px 32px rgba(15, 23, 42, 0.06);
+}
+
+.location-card .city-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(37, 210, 235, 0.12);
+  color: #0f172a;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.location-card h3 {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.location-card p {
+  margin-bottom: 0;
+}
+
+.location-card .location-note {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  color: #0f172a;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.location-cta {
+  padding: 0 0 120px;
+}
+
+.location-cta-box {
+  padding: 36px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #0f172a 0%, #111827 100%);
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.18);
+}
+
+.location-cta-box .the-title,
+.location-cta-box .the-desc {
+  color: #ffffff;
+}
+
+.location-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+@media screen and (max-width: 1024px) {
+  .location-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .location-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .location-hero {
+    padding: 80px 0 50px;
+  }
+
+  .location-panel,
+  .location-cta-box {
+    padding: 24px;
+  }
+
+  .location-map-stage {
+    aspect-ratio: 4 / 5;
+  }
+
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .location-hero-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .map-location span {
+    font-size: 10px;
+    padding: 6px 10px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .map-location span {
+    font-size: 9px;
+    padding: 5px 9px;
+  }
+
+  .location-map-legend .legend-item {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

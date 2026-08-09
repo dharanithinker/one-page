@@ -25,7 +25,7 @@
     font-size: 60%;
   }
   .video-content {
-    top: 56%;
+    top: 46%;
   }
 }
 
@@ -1984,6 +1984,20 @@
 
   .contact-block h2.the-title {
     line-height: 1.2em;
+  }
+
+  .contact-block .demo-explore-wrap {
+    margin-top: 28px;
+    padding: 22px 18px 18px;
+  }
+
+  .contact-block .demo-explore-wrap .sub-title {
+    font-size: 15px;
+    letter-spacing: 1.5px;
+  }
+
+  .contact-block .demo-explore-wrap .the-desc {
+    font-size: 17px;
   }
 
   .partner-style-2 .the-desc {
