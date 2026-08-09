@@ -1,5 +1,12 @@
 $(document).ready(function () {
     var widthScreen = $(window).width()
+    if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
+        window.addEventListener('load', function () {
+            navigator.serviceWorker.register('./sw.js').catch(function (error) {
+                console.warn('Service worker registration failed:', error)
+            })
+        })
+    }
     //AOS init
     AOS.init({
         duration: 1200,
