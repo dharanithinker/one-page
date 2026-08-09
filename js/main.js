@@ -28,6 +28,13 @@ $(document).ready(function () {
         ShowMenu === true ? Menu.toggleClass('active') : Menu.removeClass('active')
     })
 
+    $('#main-menu a').on('click', function () {
+        if (widthScreen <= 768) {
+            ShowMenu = false
+            Menu.removeClass('active')
+        }
+    })
+
     // personal-photographer page js
     var target1 = document.getElementById('scroll-move'),
         target2 = document.getElementById('scroll-move2'),

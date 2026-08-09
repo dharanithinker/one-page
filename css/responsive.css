@@ -755,27 +755,67 @@
     margin-right: 0;
   }
 
+  #header .header-content-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: static;
+  }
+
+  #header .main-nav {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: static;
+  }
+
   #main-menu {
-    display: none;
+    display: none !important;
   }
 
   #main-menu.active {
-    display: block;
+    display: block !important;
   }
 
   #header .jepret-menu-mobile {
-    display: block;
-    width: 100%;
-    border: none;
-    padding: 1px 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 12px;
+    background: #25d2eb;
+    color: #fff;
+    padding: 0;
+    box-shadow: 0 12px 24px rgba(37, 210, 235, 0.28);
+    flex: 0 0 auto;
   }
 
   .sm.mobile-menu {
-    display: none;
+    display: none !important;
     position: fixed;
-    right: 20px;
-    background: #fff;
-    margin-top: 4px;
+    top: 74px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+    margin-top: 0;
+    padding: 10px;
+    border-radius: 0;
+    background: #F8FAFC;
+    border: 1px solid rgba(218, 13, 43, 0.12);
+    box-shadow: 0 24px 42px rgba(17, 17, 17, 0.18);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    max-height: calc(100vh - 92px);
+    overflow-y: auto;
+    z-index: 140;
+  }
+
+  .sm.mobile-menu.active {
+    display: block !important;
   }
 
   .left-bar,
@@ -789,17 +829,34 @@
 
   #header .sm-clean li {
     margin-right: 0;
+    display: block;
   }
 
   #header .sm-clean a,
   .sm-clean a:hover,
   .sm-clean a:focus,
   .sm-clean a:active {
-    font-size: 1.2rem;
+    display: block;
+    padding: 14px 16px;
+    font-size: 1.25rem;
+    color: #1b1b1b;
+    border-radius: 12px;
+    text-align: left;
   }
 
   .sm-clean a span.sub-arrow::before {
     content: "+";
+  }
+
+  #header .sm-clean a:hover,
+  #header .sm-clean a:focus,
+  #header .sm-clean a:active {
+    background: linear-gradient(90deg, rgba(218, 13, 43, 0.1) 0%, rgba(242, 180, 90, 0.14) 100%);
+    color: #da0d2b;
+  }
+
+  #header .sm-clean li + li a {
+    margin-top: 4px;
   }
 
   .about-block {
