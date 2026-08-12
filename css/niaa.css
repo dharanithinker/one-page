@@ -90,6 +90,34 @@ p,
     background: var(--surface);
 }
 
+#explore-gallery {
+    padding: 72px 0;
+}
+
+#explore-gallery .explore-gallery-copy {
+    max-width: 760px;
+}
+
+#explore-gallery .section-description {
+    margin-bottom: 0;
+}
+
+#explore-gallery .explore-gallery-link {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+#explore-gallery .explore-gallery-link:hover,
+#explore-gallery .explore-gallery-link:focus {
+    color: var(--accent-hover);
+    border-bottom-color: var(--accent-hover);
+}
+
 .nia-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;

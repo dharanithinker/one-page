@@ -773,6 +773,7 @@ h2.the-title {
   text-transform: capitalize;
   line-height: 8rem;
   margin-bottom: 10px;
+  margin-left: -15px;
 }
 
 .partner-title-wrap .column-2:last-child {

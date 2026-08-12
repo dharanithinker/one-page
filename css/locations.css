@@ -441,3 +441,36 @@
     justify-content: flex-start;
   }
 }
+
+@media screen and (max-width: 1366px) and (max-height: 700px) {
+  .testimonial-block-style-2 .container {
+    max-width: 1180px;
+  }
+
+  .location-hero {
+    padding: 56px 0 32px;
+  }
+
+  .location-hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    gap: 20px;
+  }
+
+  .location-hero .the-title {
+    font-size: 3.6rem;
+    line-height: 1.06;
+    margin-bottom: 12px;
+  }
+
+  .location-hero .the-desc {
+    font-size: 1.55rem;
+    line-height: 1.55;
+  }
+
+  .india-map-img {
+    max-width: 100%;
+    max-height: 320px;
+    object-fit: contain;
+    margin-left: auto;
+  }
+}
