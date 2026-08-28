@@ -10,7 +10,7 @@
         swiperWrapper.innerHTML = '';
 
         for (let imageNum = 1; imageNum <= galleryImages; imageNum += 1) {
-            const imagePath = `img/gallery/${imageNum}.png`;
+            const imagePath = window.MaayaiMedia.url(`img/gallery/${imageNum}.png`);
             const slide = document.createElement('div');
 
             slide.className = 'swiper-slide carousel-img';

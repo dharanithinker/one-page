@@ -1,5 +1,7 @@
-const APP_CACHE = "maayai-app-v1";
-const IMAGE_CACHE = "maayai-images-v1";
+const APP_CACHE = "maayai-app-v2";
+const IMAGE_CACHE = "maayai-images-v2";
+const BLOB_MEDIA_ORIGIN = "https://maayaistorage.blob.core.windows.net";
+const BLOB_MEDIA_PATH = "/web-images/ai_maayai_webpage/";
 
 const CORE_ASSETS = [
   "./",
@@ -15,6 +17,8 @@ const CORE_ASSETS = [
   "./css/niaa.css",
   "./css/gallery.css",
   "./js/main.js",
+  "./js/media-config.js",
+  "./js/gallery-carousel.js",
   "./js/jquery-3.6.0.min.js",
   "./js/jquery.smartmenus.min.js",
   "./js/aos.js",
@@ -22,13 +26,6 @@ const CORE_ASSETS = [
   "./js/isotope.js",
   "./js/imagesloaded.pkgd.min.js",
   "./js/lightgallery-all.min.js",
-  "./img/logo_ai_maayai.png",
-  "./img/logo_niaa.png",
-  "./img/home.jpeg",
-  "./img/get_in_touch.jpeg",
-  "./img/niaa.png",
-  "./img/presence.png",
-  "./img/loading.gif",
 ];
 
 self.addEventListener("install", (event) => {
@@ -57,21 +54,25 @@ async function cacheFirst(request, cacheName) {
   }
 
   const networkResponse = await fetch(request);
-  if (networkResponse && networkResponse.ok) {
+  if (isCacheable(networkResponse)) {
     cache.put(request, networkResponse.clone());
   }
   return networkResponse;
+}
+
+function isCacheable(response) {
+  return response && (response.ok || response.type === "opaque");
 }
 
 async function staleWhileRevalidate(request, cacheName) {
   const cache = await caches.open(cacheName);
   const cachedResponse = await cache.match(request);
   const networkResponsePromise = fetch(request).then((networkResponse) => {
-    if (networkResponse && networkResponse.ok) {
+    if (isCacheable(networkResponse)) {
       cache.put(request, networkResponse.clone());
     }
     return networkResponse;
-  });
+  }).catch(() => cachedResponse);
 
   return cachedResponse || networkResponsePromise;
 }
@@ -85,6 +86,15 @@ self.addEventListener("fetch", (event) => {
 
   const url = new URL(request.url);
   const sameOrigin = url.origin === self.location.origin;
+  const isBlobMedia = url.origin === BLOB_MEDIA_ORIGIN
+    && url.pathname.startsWith(BLOB_MEDIA_PATH);
+
+  if (isBlobMedia) {
+    if (request.destination === "image") {
+      event.respondWith(staleWhileRevalidate(request, IMAGE_CACHE));
+    }
+    return;
+  }
 
   if (!sameOrigin) {
     return;
