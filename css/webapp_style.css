@@ -1060,11 +1060,19 @@ p.service-desc {
 }
 
 .team-img {
-  position: relative;
+  /* position: relative;
   z-index: 1;
   min-height: 297px;
   transform: scale(1.2) translateX(-8%);
   transition: 1000ms all;
+  will-change: transform; */
+  position: relative;
+  z-index: 1;
+  min-height: 297px;
+  transform: scale(1) translateX(0);
+  background-position: 50% 20% !important;
+  background-size: cover;
+  transition: 500ms all;
   will-change: transform;
 }
 
@@ -1094,9 +1102,9 @@ p.team-role {
 }
 
 .team-card-wrap:hover .team-img {
-  transform: scale(1.2) translateX(8%);
-  -webkit-transform: scale(1.2) translateX(8%);
-  -ms-transform: scale(1.2) translateX(8%);
+  transform: scale(1.02) translateX(0);
+  -webkit-transform: scale(1.02) translateX(0);
+  -ms-transform: scale(1.02) translateX(0);
 }
 
 .team-card-wrap:hover .team-desc-wrap {
